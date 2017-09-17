@@ -1,2 +1,2 @@
-# flask_sentiment_endpoint
-RESTFull Flask endpoint for sentiment analyze
+# Flask REST endpoint for sentiment analysis
+
