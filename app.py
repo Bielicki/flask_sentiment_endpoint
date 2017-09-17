@@ -1,13 +1,17 @@
 from flask import Flask
 from flask_restful import Api
 
-from db import db
+from Resources.sentiment import SentimentAnalysis
+
+# from db import db
 
 app = Flask(__name__)
 
 # genereted for dev purposes with secrets.token_urlsafe
-app.secret_key('CcxU23e8f9WtwAGuNISewAw91WJWp-60TNCDfG6ws78')
+app.secret_key = 'CcxU23e8f9WtwAGuNISewAw91WJWp-60TNCDfG6ws78'
 api = Api(app)
+
+api.add_resource(SentimentAnalysis, '/')
 
 
 if __name__ == '__main__':

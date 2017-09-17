@@ -11,8 +11,10 @@ class SentimentAnalysis(Resource):
                         )
 
     def post(self):
-        data = SentimentAnalisys.parser.parse_args()
+        data = SentimentAnalysis.parser.parse_args()
         text = data['text']
+        print(text)
         sid = SentimentIntensityAnalyzer()
-        ss = sid.polarity_scores(text)
-        pass
+        sentiment = sid.polarity_scores(text)
+
+        return sentiment, 200
