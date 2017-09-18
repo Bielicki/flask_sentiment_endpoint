@@ -187,4 +187,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# SQLite
+*.db
+
 # End of https://www.gitignore.io/api/osx,python,pycharm+all
